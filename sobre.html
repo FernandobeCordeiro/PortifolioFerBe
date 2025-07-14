@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sobre Mim - CANAL DO BE</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    overflow-x: hidden;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Fundo animado com partículas simples */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, #204060 15%, transparent 70%);
+    animation: pulse 10s ease-in-out infinite alternate;
+    z-index: -2;
+  }
+
+  @keyframes pulse {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.3); }
+  }
+
+  .container {
+    background: rgba(0,0,0,0.65);
+    border-radius: 20px;
+    padding: 40px 50px;
+    max-width: 850px;
+    box-shadow: 0 0 40px rgba(0, 150, 255, 0.5);
+    animation: slideUpFade 1s ease forwards;
+  }
+
+  @keyframes slideUpFade {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: #61dafb;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  header p {
+    font-size: 1.25rem;
+    color: #a0cfff;
+  }
+
+  .profile {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar {
+    flex-shrink: 0;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #61dafb;
+    overflow: hidden;
+    box-shadow: 0 0 25px #61dafb;
+    background: white;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px #61dafb;
+    }
+    100% {
+      box-shadow: 0 0 30px #00bfff;
+    }
+  }
+
+  .info {
+    max-width: 550px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #d9e9ff;
+  }
+
+  .info strong {
+    color: #00bfff;
+  }
+
+  /* Botão voltar */
+  .btn-back {
+    margin-top: 35px;
+    display: inline-block;
+    padding: 12px 30px;
+    background: #00bfff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px #00bfff88;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .btn-back:hover {
+    background: #008fcc;
+    box-shadow: 0 8px 25px #008fcccc;
+  }
+
+  @media(max-width: 700px) {
+    .profile {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Sobre Mim</h1>
+      <p>Conheça um pouco sobre mim</p>
+    </header>
+
+    <section class="profile">
+        <div class="avatar.png">
+        <img src="avatar.png" alt="Meu Avatar" width="180" height="180" />
+      </div>
+
+      <div class="info">
+        <p>Oi! Tenho <strong>13 anos</strong>, tenho <strong>olhos castanhos</strong>, <strong>cabelo liso preto</strong> e <strong>tom de pele branco</strong>.</p>
+        <p>Adoro <strong>jogar no Xbox 360 e no computador</strong>. É um dos meus hobbies favoritos e onde me divirto muito.</p>
+        <p>Meu sonho é me tornar um <strong>programador</strong>, criando projetos e jogos que possam ajudar e entreter pessoas ao redor do mundo.</p>
+        <p>Estou começando minha jornada na programação e quero aprender cada vez mais para realizar esse sonho!</p>
+
+        <a href="index.html" class="btn-back" title="Voltar para o portfólio">← Voltar ao Portfólio</a>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
